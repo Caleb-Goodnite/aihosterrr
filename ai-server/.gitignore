@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+.venv/
+venv/
+.env
+
+# Runtime outputs
+generated_files/
+
+# OS / tooling
+.DS_Store
+.idea/
+.vscode/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
