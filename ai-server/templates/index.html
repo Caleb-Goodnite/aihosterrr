@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Assistant - ChatGPT Clone</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+    <aside class="sidebar">
+        <button class="new-chat-btn">
+            <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+            New chat
+        </button>
+        <div class="chat-history" id="chat-history">
+            <div class="history-item">Recent Chat 1</div>
+            <div class="history-item">System Architecture...</div>
+            <div class="history-item">Flask Frontend Draft</div>
+        </div>
+    </aside>
+
+    <main class="main-content">
+        <header style="padding: 10px 20px; border-bottom: 1px solid var(--border); display: flex; align-items: center; justify-content: center; font-weight: 600; color: var(--text-muted); font-size: 14px;">
+            AI Assistant Service (qwen2.5:7b-instruct)
+        </header>
+        <div class="chat-container" id="chat-container">
+            <div class="messages-wrapper" id="messages-wrapper">
+                <!-- Welcome Message -->
+                <div class="message ai">
+                    <div class="avatar">AI</div>
+                    <div class="message-content">
+                        Hello! I'm your local AI assistant. How can I help you today?
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="input-area">
+            <div class="input-container">
+                <textarea id="user-input" placeholder="Message AI..." rows="1"></textarea>
+                <button class="send-btn" id="send-btn">
+                    <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="16" width="16" xmlns="http://www.w3.org/2000/svg"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
