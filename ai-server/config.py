@@ -9,7 +9,7 @@ import os
 from pathlib import Path
 
 # Default model aligned with project requirements (Ollama tag may vary by pull).
-MODEL: str = os.getenv("OLLAMA_MODEL", "qwen2.5:7b-instruct")
+MODEL: str = os.getenv("OLLAMA_MODEL", "qwen2.5:7b")
 
 # Ollama HTTP API base URL (no trailing slash).
 OLLAMA_URL: str = os.getenv("OLLAMA_URL", "http://127.0.0.1:11434").rstrip("/")
