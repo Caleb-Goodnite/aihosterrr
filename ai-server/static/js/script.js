@@ -23,6 +23,11 @@ async function sendMessage() {
     const text = userInput.value.trim();
     if (!text) return;
 
+    // Hide welcome screen
+    const welcome = document.getElementById('welcome-screen');
+    if (welcome) welcome.style.display = 'none';
+    chatContainer.style.paddingTop = '40px';
+
     // Add user message to UI
     appendMessage('user', text);
     userInput.value = '';
